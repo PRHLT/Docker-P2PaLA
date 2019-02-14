@@ -1,11 +1,21 @@
-1. Install docker
-curl -fsSL https://get.docker.com -o get-docker.sh && chmod +x get-docker.sh && sudo sh get-docker.sh
+# Docker-P2PaLA
 
-1.5 Optinally add your user to the docker group:
+ Docker image that isolates and automates the use of the P2PaLA framework for text line detection. 
+
+## Requirements
+
+- This software requires the installation of docker in the machine where it will be executed. 
+
+	curl -fsSL https://get.docker.com -o get-docker.sh && chmod +x get-docker.sh && sudo sh get-docker.sh
+
+- Optinally add your user to the docker group:
 
 sudo usermod -aG docker $your_user
 
 (this requires you to log out and log in to take effect)
+
+
+## Use of the Docker Image
 
 2. Build the p2pala-docker image (sudo only required if user not in docker group)
 sudo docker build --rm  . -t p2pala-docker
