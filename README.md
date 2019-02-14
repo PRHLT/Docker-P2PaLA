@@ -14,7 +14,8 @@ the following comand in order to download and install the bleeding edge version 
 	```
 	sudo usermod -aG docker $your_user
 	```
-(adding a user to a group requires you to log out and log in order for the change to take effect)
+	(adding a user to a group requires you to log out and log in order for the change to take effect)
+
 --- 
 
 ## Use of the Docker Image
