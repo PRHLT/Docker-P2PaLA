@@ -22,12 +22,17 @@ the following comand in order to download and install the bleeding edge version 
 
 > Note that the use of sudo in the following commands is only required if the user has not been added to the docker group. 
 
-1. In order to use the image (and launch a container)  you will need to first build the container. Go inside
-the downloaded repository and execute the following command: 
+1. In order to use the image (and launch a container)  you will need to first download (fastest) or build the container. 
+
+* To download [vbosch/p2pala](https://hub.docker.com/r/vbosch/p2pala) or pull the current version of the hub image simply execute the following command:
+	```
+	sudo docker pull vbosch/p2pala
+	```
+* To build the container clone this repository, go inside the downloaded repository and execute the following command: 
 	```
 	sudo docker build --rm  . -t p2pala-docker
 	```
-> Although building the docker image takes time it only needs to be performed once. If any changes are performed
+> Although downloading/building the docker image takes time it only needs to be performed once. If any changes are performed
 in any of the files a recompilation of the image will be required. Before building the image a config.txt and model.pth
 are required to be present in their respective folders if automatic region detection is to be performed. Alternatively
 the run.sh can be modified (before image compilation) to look for the models in the binded folder. 
