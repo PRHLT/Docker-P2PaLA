@@ -1,0 +1,4 @@
+#-- Do not upload models
+*
+# Except this file
+!.gitignore
