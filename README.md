@@ -37,7 +37,7 @@ in any of the files a recompilation of the image will be required. Before buildi
 are required to be present in their respective folders if automatic region detection is to be performed. Alternatively
 the run.sh can be modified (before image compilation) to look for the models in the binded folder. 
 
-2. Once the docker image is compiled their exists two ways of using it: 
+2. Once the docker image is compiled/downloaded their exists two ways of using it: 
 
 * Using the image to login and perform complex experimentation (train, decode) 
 	```
@@ -47,8 +47,9 @@ the run.sh can be modified (before image compilation) to look for the models in 
 	```
 	sudo docker run --rm -it --name pala --mount 'type=bind,src=$workdir,dst=/work-dir' --shm-size="1g" p2pala-docker:latest
 	```
-> To use the automatic run.sh script you must substitute a $workdir with a local folder that contains input and
-output subfolders. The input folder must contain the images of which P2PaLA must detect the regions as per the 
+> To use the automatic run.sh script you must substitute a $workdir with a local folder that contains config, models, input and
+output subfolders. The config folder must contain a config.txt with the relevant options as per P2PaLA. The models folder
+most contain a model.pth file that is an actually trained model. The input folder must contain the images of which P2PaLA must detect the regions as per the 
 the provided model. The output folder will contain the results provided by P2PaLA (Specifically the page
 results will be in $workdir/output/results/prod/page) 
 
