@@ -1,6 +1,2 @@
 work-dir/
-models/*
-!models/.gitkeep
-config/*
-!config/.gitkeep
 
